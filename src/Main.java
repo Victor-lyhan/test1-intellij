@@ -6,14 +6,16 @@ public class Main {
         // IntelliJ IDEA suggests fixing it.
         Scanner input = new Scanner(System.in);
         System.out.println("Test1 - intelliJ");
+        Pair<Integer,Double,String> valuePair = new Pair(5, 2.2, "Hi");
         int integers;
         boolean isStop = true;
+        System.out.println(valuePair.first + valuePair.second + valuePair.third);
         while(isStop) {
             integers = input.nextInt();
             switch (integers) {
                 case 0:
                     System.out.println("This is 1 less than 1");
-                    break;
+                    break; 
                 case 1:
                     System.out.println("This is 1 less than 2");
                     break;
@@ -29,6 +31,19 @@ public class Main {
             }
         }
         input.close();
+
+    }
+
+    static class Pair<A,B,C>{
+        A first;
+        B second;
+        C third;
+
+        public Pair(A firstValue, B secondValue, C thirdValue){
+            first = firstValue;
+            second = secondValue;
+            third = thirdValue;
+        }
 
     }
 }
